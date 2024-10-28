@@ -26,12 +26,12 @@ document.getElementById('loginForm').addEventListener('submit', async function (
             if (employee) {
                 // Store the logged-in user and employee details
                 const loggedInUser = {
-                    ...user,
-                    //username: user.username,
-                    //employeeId: employee.employeeId,
+                    
+                    username: user.username,
+                    employeeId: employee.employeeId,
                     firstName: employee.firstName,
                     lastName: employee.lastName,
-                    //role: user.role
+                    role: user.role
                 };
              
                 localStorage.setItem('loggedInUser', JSON.stringify(loggedInUser));
