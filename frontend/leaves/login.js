@@ -10,11 +10,14 @@ document.getElementById('loginForm').addEventListener('submit', async function (
         // http://localhost:3000/users?_embed=employee&username=EMP_L6Zae&password=pwd123
 
         const response = await fetch(`http://localhost:3000/users?username=${username}&password=${password}&_embed=employee`);
+      
 
         const users = await response.json();
+       
 
         if (users.length > 0) {
             const user = users[0];
+      
             // Find the associated employee data
             const employee = user.employee;
 
@@ -23,13 +26,14 @@ document.getElementById('loginForm').addEventListener('submit', async function (
             if (employee) {
                 // Store the logged-in user and employee details
                 const loggedInUser = {
-                    username: user.username,
-                    employeeId: employee.employeeId,
+                    ...user,
+                    //username: user.username,
+                    //employeeId: employee.employeeId,
                     firstName: employee.firstName,
                     lastName: employee.lastName,
-                    role: user.role
+                    //role: user.role
                 };
-
+             
                 localStorage.setItem('loggedInUser', JSON.stringify(loggedInUser));
 
                 alert('Login successful!');
