@@ -7,6 +7,11 @@ document.addEventListener('DOMContentLoaded', async function() {
         window.location.href = 'login.html';
         return;
     }
+console.log(loggedInUser);
+
+if(loggedInUser.role == 'Admin'){
+    window.location.href = 'managerLeaveRequest.html';
+}
 
     // Display welcome message
     const welcomeMessage = document.getElementById('welcomeMessage');

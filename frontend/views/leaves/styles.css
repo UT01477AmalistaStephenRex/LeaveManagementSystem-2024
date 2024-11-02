@@ -1,22 +1,47 @@
 /* Global Styles */
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
-    margin: 0;
-    padding: 0;
     display: flex;
-    justify-content: center;
     align-items: center;
-    height: 100vh;
+    justify-content: center;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #4a90e2, #e94e77);
 }
 
+.background-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+    z-index: -1; 
+    opacity: 0.5; }
+
 .container {
-    background-color: #ffffff;
+    position: relative; 
+    z-index: 1;
+    width: 100%;
+    max-width: 400px;
     padding: 20px;
-    border-radius: 8px;
+    
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    width: 400px;
+    border-radius: 20px;
+    transition: opacity 1s ease, transform 1s ease;
 }
+.side-image {
+    border: none;
+    outline: none;
+    opacity: 3;
+    filter: grayscale(20%) contrast(50%);
+    border-radius: 0;
+      position: absolute;
+      right: 20px; 
+      top: 450px; 
+      transform: translateY(50%);
+      width: 50%; 
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
 
 .header {
     display: flex;
@@ -27,54 +52,104 @@ body {
 
 h2 {
     text-align: center;
-    color: #333;
+    color: #b42192;
     margin-bottom: 20px;
+    
 }
 
-.form label {
-    display: block;
-    color: #555;
-    font-weight: bold;
-    margin-bottom: 5px;
+.login-form {
+    background: linear-gradient(135deg, #4a90e2, #e94e77);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 2rem;
+    opacity: 0;
+    transform: translateY(-100px);
+    animation: fadeIn 1s forwards;
 }
 
-.form input[type="text"],
-.form input[type="password"],
-.form input[type="date"],
-.form input[type="number"] {
+.icon {
+    text-align: center;
+    font-size: 3rem;
+    color: #05203f;
+}
+
+.login-form h2 {
+    text-align: center;
+    margin-bottom: 1rem;
+    color: #05203f;
+}
+
+.input-box {
+    position: relative;
+    margin-bottom: 1.5rem;
+}
+
+.input-box input {
     width: 100%;
-    padding: 8px;
-    margin-bottom: 10px;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-    box-sizing: border-box;
-}
-
-.form input[type="text"]:focus,
-.form input[type="password"]:focus,
-.form input[type="date"]:focus,
-.form input[type="number"]:focus {
-    border-color: #0066cc;
+    padding: 10px;
+    font-size: 1rem;
+    border: none;
+    border-bottom: 2px solid #ddd;
     outline: none;
+    background: transparent;
+    color: #100f0f;
 }
 
-.btn, .btn-logout {
-    background-color: #0066cc;
-    color: white;
+
+.input-box label {
+    /* position: absolute;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
+    color: #5f5b5b;
+    transition: 0.5s; */
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
+    transition: 0.3s;
+    pointer-events: none;
+    color: #05203f;
+    font-size: 25px;
+}
+
+
+
+
+
+.input-box input:focus ~ label,
+.input-box input:valid ~ label {
+    top: -3px;
+    color:#b42192;
+}
+
+.btn {
+    width: 100%;
     padding: 10px;
     border: none;
-    border-radius: 4px;
+    outline: none;
+    background: #05203f;
+    color: white;
+    font-size: 1rem;
+    border-radius: 5px;
     cursor: pointer;
-    font-size: 16px;
+    border-radius: 20px;
 }
 
 .btn-logout {
     padding: 5px 10px;
     font-size: 14px;
+    background-color: #da1c1c;
+    border-radius: 5px;
+    cursor: pointer;
+    border: none;
+    font-size: 1rem;
+    padding: 10px;
+    color: white;
 }
 
 .btn:hover, .btn-logout:hover {
-    background-color: #004999;
+    background-color: #b42192;
 }
 
 .leave-list {
@@ -114,3 +189,34 @@ h2 {
 .status.rejected {
     color: #d9534f;
 }
+.actions p {
+    text-align: center;
+    margin-top: 10px;
+    color: #b42192;
+}
+
+.actions p a {
+    color: #b42192;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+@media (max-width: 500px) {
+    .container {
+        padding: 10px;
+    }
+
+    .login-form {
+        padding: 1.5rem;
+    }
+}
+
+

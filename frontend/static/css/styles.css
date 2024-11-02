@@ -7,21 +7,21 @@ body {
     font-family: Arial, Helvetica, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f5f5f5;
+    background: linear-gradient(135deg, #193759, #c53f63);
   }
   
   .navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #f5f5f5;
+    background-color: #630f26;
   }
 
   .navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #000;
+    background-color: #092e59;
     padding: 15px;
   }
 
@@ -50,7 +50,7 @@ body {
 
   .menu-item:hover,
   .dropbtn:hover {
-    background-color: #555;
+    background-color: #630f26;
   }
 
   .dropdown {
@@ -79,9 +79,9 @@ body {
     background-color: #f1f1f1;
   }
 
-  .dropbtn:hover .dropdown-content {
-    display: block;
-  }
+  .dropdown:hover .dropdown-content {
+    display: block;  */
+}
 
   .dropbtn:hover .dropbtn {
     background-color: #555;

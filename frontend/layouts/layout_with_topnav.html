@@ -1,33 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Company Navbar</title>
-    <link rel="stylesheet" href="/static/css/styles.css">
-    {{style}}
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Company Navbar</title>
+  <link rel="stylesheet" href="/static/css/styles.css">
+  {{style}}
 </head>
+
 <body>
-    <nav class="navbar">
-        <div class="navbar-left">
-          <a href="/" class="company-name">UnicomTIC</a>
+  <nav class="navbar">
+
+    <div class="navbar-left">
+      <a href="/" class="company-name">UnicomTIC</a>
+    </div>
+
+    <div class="navbar-right">
+
+      <a href="/employees" class="menu-item">Employee</a>
+
+      <div class="dropdown">
+        <button class="dropbtn">Leave Management</button>
+        <div class="dropdown-content">
+          <a href="frontend/views/leaves/leaveRequest.html">Apply Leave</a>
+          <a href="/managerLeaveRequest">Manage Leave</a>
         </div>
-        <div class="navbar-right">
-          <a href="/employees" class="menu-item">Employee</a>
-          <div class="dropdown">
-            <button class="dropbtn">Leave Management</button>
-            <div class="dropdown-content">
-              <a href="#">Apply Leave</a>
-              <a href="#">Manage Leave</a>
-            </div>
-          </div>
-        </div>
-      </nav>
-      <main>
-         {{content}}
-      </main>
-      <footer>
-        {{script}}
-      </footer>
+      </div>
+
+    </div>
+  </nav>
+
+  <main>
+    {{content}}
+  </main>
+  <footer>
+    {{script}}
+  </footer>
 </body>
+
 </html>
