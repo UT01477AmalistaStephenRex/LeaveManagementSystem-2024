@@ -2,7 +2,6 @@
 body {
     display: flex;
     align-items: center;
-    /* justify-content: center; */
     margin-left: 50px;
     min-height: 100vh;
     background: linear-gradient(135deg, #193759, #c53f63);
@@ -24,16 +23,17 @@ body {
 
 .side-image {
     width: 600px;
-    height: 900px;
+    height:1200px;
+
     border: none;
     outline: none;
     opacity: 3;
     filter: grayscale(20%) contrast(50%);
-    border-radius: 0;
-    position: absolute;
+    position:absolute;
     right: 1px;
-    top: 375px;
-    margin-top: 40px;
+    top: 550px;
+    margin-top: 2px;
+    margin-bottom: 2px;
     transform: translateY(-50%);
     border-radius: 10px;
 }
@@ -79,7 +79,9 @@ h2 {
     font-size: 3rem;
     color: #05203f;
 }
-
+.input-box input{
+    color: #630f26;
+}
 
 
 .input-box input[type="text"],
@@ -96,7 +98,7 @@ h2 {
 }
 
 .input-box input:focus {
-    border-color: black;
+    border-color: #630f26;
     background-color: #9eaec1;
 }
 
@@ -152,17 +154,20 @@ input[type="number"]:focus~label {
 
 
 
-.status {
+.status3 {
     font-weight: bold;
     text-transform: uppercase;
+    background-color:#d5adbe ;
+    color:#092e59 ;
+    width: 500px;
 }
 
 .status.pending {
-    color: #f0ad4e;
+    color: #d38314;
 }
 
 .status.approved {
-    color: #5cb85c;
+    color: #38ae38;
 }
 
 .status.rejected {

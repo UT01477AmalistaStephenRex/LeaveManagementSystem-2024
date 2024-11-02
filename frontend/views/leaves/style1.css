@@ -27,7 +27,6 @@ body {
     left: 0px;
     top: 0px;
     width: 50%;
-
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     z-index: -1;
@@ -92,6 +91,12 @@ select {
     transition: border-color 0.3s;
     color: #05203f;
 
+}
+.status1{
+    background-color: #e0c3cf;
+    border-style: none;
+    padding: 10px;
+    color: #05203f;
 }
 
 #statusFilter{
@@ -214,6 +219,7 @@ textarea:focus {
     background: #092e59;
 }
 
+
 @keyframes fadeIn {
     to {
         opacity: 1;
@@ -231,3 +237,4 @@ textarea:focus {
         width: 90%; 
     }
 }
+

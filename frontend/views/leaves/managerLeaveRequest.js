@@ -1,4 +1,6 @@
 document.addEventListener('DOMContentLoaded', async function () {
+    
+
     const loggedInUser = JSON.parse(localStorage.getItem('loggedInUser'));
 
     if (!loggedInUser) {
@@ -50,7 +52,7 @@ document.addEventListener('DOMContentLoaded', async function () {
         filteredRequests.forEach(request => {
             const li = document.createElement('li');
             li.classList.add('leave-item');
-            li.innerHTML = `
+            li.innerHTML = `<div class= "status1">
                 <div><b>Requested By : ${request.employee.firstName + " " + request.employee.lastName}</b></div>
                 <div>Reason: ${request.reason}</div>
                 <div>From: ${request.dateFrom}</div>
@@ -59,7 +61,7 @@ document.addEventListener('DOMContentLoaded', async function () {
                 <div>Status: <span class="status ${request.status.toLowerCase()}">${request.status}</span></div>
                 ${request.status === 'Pending' ? `
                 <button class="btn-approve" data-id="${request.id}">Approve</button>
-                <button class="btn-reject" data-id="${request.id}">Reject</button>` : ''}
+                <button class="btn-reject" data-id="${request.id}">Reject</button>` : ''}</div>
             `;
             leaveRequestsList.appendChild(li);
         });

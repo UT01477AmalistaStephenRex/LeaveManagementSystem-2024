@@ -36,16 +36,17 @@ document.getElementById('loginForm').addEventListener('submit', async function (
 
                 localStorage.setItem('loggedInUser', JSON.stringify(loggedInUser));
 
-                alert('Login successful!');
+
                 if (user.role == 'Admin') {
 
                     window.location.href = 'leaveRequest.html';
-                } else if (user.role == 'Manager') {
-                    window.location.href = 'leaveRequest.html';
+                    alert('Login successful!');
+                } else if (user.role == 'Employee') {
+                    window.location.href = 'managerLeaveRequest.html';
 
                 } else if (user.role == 'Manager') {
-                    window.location.href = 'leaveRequest.html';
-
+                    window.location.href = 'managerLeaveRequest.html';
+                    alert('Login successful!');
                 }
             } else {
                 alert('Employee data not found.');

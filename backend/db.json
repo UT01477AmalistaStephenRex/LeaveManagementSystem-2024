@@ -17,6 +17,15 @@
       "lastName": "Holin",
       "dob": "1972-12-05",
       "doj": "2024-09-01"
+    },
+    {
+      "id": "EMP_mIImt",
+      "employeeId": "EMP_mIImt",
+      "nic": "200354513115",
+      "firstName": "Mathu",
+      "lastName": "Shankar",
+      "dob": "2003-03-03",
+      "doj": "2024-04-03"
     }
   ],
   "users": [
@@ -33,6 +42,13 @@
       "username": "EMP_4SK8Q",
       "password": "pwd123",
       "role": "Employee"
+    },
+    {
+      "username": "EMP_mIImt",
+      "password": "pwd123",
+      "role": "Manager",
+      "employeeId": "EMP_mIImt",
+      "id": "EMP_mIImt"
     }
   ],
   "leaveRequests": [
@@ -66,54 +82,7 @@
       },
       "processedDate": "2024-10-28"
     },
-    {
-      "id": "a874",
-      "employeeId": "EMP_Dy4kP",
-      "reason": "Sick",
-      "dateFrom": "2024-10-31",
-      "numOfDays": "3",
-      "applicationDate": "2024-10-28",
-      "status": "Approved",
-      "employee": {
-        "id": "EMP_Dy4kP",
-        "employeeId": "EMP_Dy4kP",
-        "nic": "92312212V",
-        "firstName": "Amal",
-        "lastName": "Stephen",
-        "dob": "2015-01-06",
-        "doj": "2024-09-03"
-      },
-      "processedDate": "2024-10-28"
-    },
-    {
-      "id": "e812",
-      "employeeId": "EMP_Dy4kP",
-      "reason": "Sick",
-      "dateFrom": "2024-10-31",
-      "numOfDays": "3",
-      "applicationDate": "2024-10-02",
-      "status": "Rejected",
-      "employee": {
-        "id": "EMP_Dy4kP",
-        "employeeId": "EMP_Dy4kP",
-        "nic": "92312212V",
-        "firstName": "Amal",
-        "lastName": "Stephen",
-        "dob": "2015-01-06",
-        "doj": "2024-09-03"
-      },
-      "processedDate": "2024-10-28",
-      "rejectionReason": "can't accept "
-    },
-    {
-      "id": "21f6",
-      "employeeId": "EMP_Dy4kP",
-      "reason": "Sick",
-      "dateFrom": "2024-10-29",
-      "numOfDays": "3",
-      "applicationDate": "2024-10-28",
-      "status": "Pending"
-    },
+
     {
       "id": "2c32",
       "employeeId": "EMP_4SK8Q",

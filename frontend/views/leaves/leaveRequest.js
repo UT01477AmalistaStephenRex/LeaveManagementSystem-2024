@@ -82,12 +82,12 @@ if(loggedInUser.role == 'Admin'){
             leaveRequests.forEach(request => {
                 const li = document.createElement('li');
                 li.classList.add('leave-item'); // Add a class for styling
-                li.innerHTML = `
+                li.innerHTML = `<div class="status3">
                     <div>Reason: ${request.reason}</div>
                     <div>From: ${request.dateFrom}</div>
                     <div>Days: ${request.numOfDays}</div>
                     <div>Applied on: ${request.applicationDate}</div>
-                    <div>Status: <span class="status ${request.status.toLowerCase()}">${request.status}</span></div>
+                    <div>Status: <span class="status ${request.status.toLowerCase()}">${request.status}</span></div></div>
                 `;
                 leaveRequestsList.appendChild(li);
             });

@@ -97,12 +97,6 @@ h2 {
 
 
 .input-box label {
-    /* position: absolute;
-    top: 50%;
-    left: 10px;
-    transform: translateY(-50%);
-    color: #5f5b5b;
-    transition: 0.5s; */
     position: absolute;
     top: 50%;
     left: 10px;
@@ -113,6 +107,9 @@ h2 {
     font-size: 25px;
 }
 
+.input-box input{
+    color: #05203f;
+}
 
 
 
