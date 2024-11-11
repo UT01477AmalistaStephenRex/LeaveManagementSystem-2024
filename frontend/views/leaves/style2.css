@@ -2,16 +2,16 @@
 body {
     display: flex;
     align-items: center;
-    margin-left: 50px;
     min-height: 100vh;
     background: linear-gradient(135deg, #193759, #c53f63);
-    padding: 10px;
 }
 
-
+.mainForm{
+    width: 50%;
+}
 
 .container {
-    width: 500px;
+    width: 615px;
     padding: 55px;
     height: inherit;
     background: linear-gradient(135deg, #96bdea, #e22f5f);
@@ -22,9 +22,8 @@ body {
 }
 
 .side-image {
-    width: 600px;
+    width: 50%;
     height:1200px;
-
     border: none;
     outline: none;
     opacity: 3;
@@ -68,7 +67,6 @@ h2 {
 .form {
     display: flex;
     flex-direction: column;
-    gap: 15px;
 }
 
 
